@@ -12,6 +12,101 @@ menu.dbg=Debug symbols and core logs
 menu.rtlib=C Runtime Library
 menu.upload_method=Upload method
 
+#############################################################################
+##VSD Squadron Mini
+
+VSDSquadron_mini.name=VSDSquadron_mini
+VSDSquadron_mini.build.core=arduino
+VSDSquadron_mini.build.board=VSDSquadron_mini
+VSDSquadron_mini.upload.maximum_size=0
+VSDSquadron_mini.upload.maximum_data_size=0
+VSDSquadron_mini.build.variant_h=variant_{build.board}.h
+VSDSquadron_mini.debug.tool=gdb-WCH_LinkE
+
+
+# VSD Squadron Mini Board
+VSDSquadron_mini.menu.pnum.CH32V003F4=CH32V003F4 EVT
+VSDSquadron_mini.menu.pnum.CH32V003F4.node=NODE_V003F4
+VSDSquadron_mini.menu.pnum.CH32V003F4.upload.maximum_size=16384
+VSDSquadron_mini.menu.pnum.CH32V003F4.upload.maximum_data_size=2048
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.mcu=QingKe-V2A
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.board=CH32V003F4
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.series=CH32V00x
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.variant=CH32V00x/CH32V003F4
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.chip=CH32V003F4
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.march=rv32ecxw
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.mabi=ilp32e
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.math_lib_gcc=-lm 
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.IQ_math_RV32=
+VSDSquadron_mini.menu.pnum.CH32V003F4.build.ch_extra_lib=-lprintf
+
+
+# Upload menu
+VSDSquadron_mini.menu.upload_method.swdMethod=WCH-SWD
+VSDSquadron_mini.menu.upload_method.swdMethod.upload.protocol=
+VSDSquadron_mini.menu.upload_method.swdMethod.upload.options=
+VSDSquadron_mini.menu.upload_method.swdMethod.upload.tool=WCH_linkE
+
+
+# Optimizations
+VSDSquadron_mini.menu.opt.osstd=Smallest (-Os default)
+VSDSquadron_mini.menu.opt.osstd.build.flags.optimize=-Os 
+VSDSquadron_mini.menu.opt.oslto=Smallest (-Os) with LTO
+VSDSquadron_mini.menu.opt.oslto.build.flags.optimize=-Os -flto
+VSDSquadron_mini.menu.opt.o1std=Fast (-O1)
+VSDSquadron_mini.menu.opt.o1std.build.flags.optimize=-O1
+VSDSquadron_mini.menu.opt.o1lto=Fast (-O1) with LTO
+VSDSquadron_mini.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+VSDSquadron_mini.menu.opt.o2std=Faster (-O2)
+VSDSquadron_mini.menu.opt.o2std.build.flags.optimize=-O2
+VSDSquadron_mini.menu.opt.o2lto=Faster (-O2) with LTO
+VSDSquadron_mini.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+VSDSquadron_mini.menu.opt.o3std=Fastest (-O3)
+VSDSquadron_mini.menu.opt.o3std.build.flags.optimize=-O3
+VSDSquadron_mini.menu.opt.o3lto=Fastest (-O3) with LTO
+VSDSquadron_mini.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+VSDSquadron_mini.menu.opt.ogstd=Debug (-Og)
+VSDSquadron_mini.menu.opt.ogstd.build.flags.optimize=-Og
+VSDSquadron_mini.menu.opt.o0std=No Optimization (-O0)
+VSDSquadron_mini.menu.opt.o0std.build.flags.optimize=-O0
+
+# Clock Select 
+VSDSquadron_mini.menu.clock.48MHz_HSI=48MHz Internal
+VSDSquadron_mini.menu.clock.48MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_48MHz_HSI=48000000
+VSDSquadron_mini.menu.clock.24MHz_HSI=24MHz Internal
+VSDSquadron_mini.menu.clock.24MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_24MHz_HSI=24000000
+VSDSquadron_mini.menu.clock.8MHz_HSI=8MHz Internal
+VSDSquadron_mini.menu.clock.8MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_8MHz_HSI=8000000
+VSDSquadron_mini.menu.clock.48MHz_HSE=48MHz External
+VSDSquadron_mini.menu.clock.48MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_48MHz_HSE=48000000
+VSDSquadron_mini.menu.clock.24MHz_HSE=24MHz External
+VSDSquadron_mini.menu.clock.24MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_24MHz_HSE=24000000
+VSDSquadron_mini.menu.clock.8MHz_HSE=8MHz External
+VSDSquadron_mini.menu.clock.8MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_8MHz_HSE=8000000
+
+# Debug information
+VSDSquadron_mini.menu.dbg.none=None
+VSDSquadron_mini.menu.dbg.none.build.flags.debug=-DNDEBUG 
+VSDSquadron_mini.menu.dbg.enable_sym=Symbols Enabled (-g)
+VSDSquadron_mini.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+VSDSquadron_mini.menu.dbg.enable_log=Core logs Enabled
+VSDSquadron_mini.menu.dbg.enable_log.build.flags.debug=
+VSDSquadron_mini.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+VSDSquadron_mini.menu.dbg.enable_all.build.flags.debug=-g
+
+
+# C Runtime Library
+VSDSquadron_mini.menu.rtlib.nano=Newlib Nano (default)
+VSDSquadron_mini.menu.rtlib.nano.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs
+VSDSquadron_mini.menu.rtlib.nanofp=Newlib Nano + Float Printf
+VSDSquadron_mini.menu.rtlib.nanofp.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _printf_float
+VSDSquadron_mini.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+VSDSquadron_mini.menu.rtlib.nanofs.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _scanf_float
+VSDSquadron_mini.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+VSDSquadron_mini.menu.rtlib.nanofps.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _printf_float -u _scanf_float
+VSDSquadron_mini.menu.rtlib.full=Newlib Standard
+VSDSquadron_mini.menu.rtlib.full.build.flags.ldflags=--specs=nosys.specs
+
 
 
 #############################################################################

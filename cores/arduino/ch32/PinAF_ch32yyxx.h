@@ -5,6 +5,9 @@
 #include "../../../variants/CH32V20x/PinAF_CH32V20x.h"
 #endif
 
+#if defined(VSDSquadron_mini)
+#include "../../../variants/CH32V00x/PinAF_VSDSquadron_mini.h"
+#endif
 
 #if defined(CH32V00x)
 #include "../../../variants/CH32V00x/PinAF_CH32V00x.h"

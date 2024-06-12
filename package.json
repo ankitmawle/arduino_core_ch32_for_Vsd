@@ -1,7 +1,7 @@
 {
-    "description": "Core library for CH32duino",
+    "description": "Core library for VSD Squadron Mini CH32duino",
     "name": "framework-arduino-openwch-ch32",
     "system": "all",
-    "url": "https://github.com/openwch/arduino_core_ch32",
+    "url": "https://github.com/ankitmawle/arduino_core_ch32_for_Vsd",
     "version": "0.0.0"
 }
